@@ -2,13 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import{ NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
+import { DialogModule } from '@progress/kendo-angular-dialog';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ContractComponent } from './contract/contract.component';
+import { CreateContractComponent } from './create-contract/create-contract.component';
 
 import{AppRoutingModule} from './app.routes'
 
@@ -46,12 +52,22 @@ load(
 
 @NgModule({
  
-  imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule, AngularFontAwesomeModule, NgbModule.forRoot(),
+  imports: [
+  BrowserModule, 
+  FormsModule, 
+  HttpModule, 
+  AppRoutingModule, 
+  BrowserAnimationsModule, 
+  AngularFontAwesomeModule, 
+  DialogModule, 
+  NgbModule.forRoot(),
+  ButtonsModule,
+  InputsModule,
+  DropDownsModule
     // ... and register it
-    ButtonsModule
   ],
   
-  declarations: [AppComponent, LoginComponent, ContractComponent],
+  declarations: [AppComponent, LoginComponent, ContractComponent, CreateContractComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

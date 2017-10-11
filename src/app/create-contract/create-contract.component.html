@@ -1,0 +1,121 @@
+<button kendoButton (click)="open()">Create Contract</button>
+<div class="create-modal">
+	<kendo-dialog title="Create Contract" *ngIf="opened" (close)="close('cancel')">
+	  <div class="form-preview">
+	    <div class="row">
+	      <div class="col-sm-6">
+	        <p>Contract code</p>
+	        <kendo-textbox-container>
+	          <input kendoTextBox />
+	        </kendo-textbox-container>
+	      </div>
+	      <div class="col-sm-6">
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-12">
+	        <p>Contract description</p>
+	        <kendo-textbox-container>
+	          <input kendoTextBox />
+	        </kendo-textbox-container>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-12">
+	        <p>SOR title (optional)</p>
+	        <kendo-textbox-container >
+	          <input kendoTextBox />
+	        </kendo-textbox-container>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+	        <p>Default question set (optional)</p>
+	        <kendo-dropdownlist  [data]="QuestionSet">
+	      </kendo-dropdownlist>
+	      </div>
+	      <div class="col-sm-6">
+	        <p>List name (optional)</p>
+	        <kendo-dropdownlist  [data]="ListName">
+	      </kendo-dropdownlist>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+	        <p>Invoice type</p>
+	        <kendo-textbox-container>
+	          <input kendoTextBox />
+	        </kendo-textbox-container>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+	        <p>Rentention percentage (optional)</p>
+	        <kendo-textbox-container>
+	          <input kendoTextBox />
+	        </kendo-textbox-container>
+	      </div>
+	      <div class="col-sm-6">
+	        <p>Retention period (optional)</p>
+	        <kendo-textbox-container>
+	          <input kendoTextBox />
+	        </kendo-textbox-container>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-3">
+	        <p>Planned maintenance</p>
+	       <kendo-switch [(ngModel)]="isChecked"></kendo-switch>
+	      </div>
+	      <div class="col-sm-3">
+	        <p>Job complete</p>
+	        <kendo-switch [(ngModel)]="checked"></kendo-switch>
+	      </div>
+	      <div class="col-sm-6">
+	        <p>Status code</p>
+	        <kendo-dropdownlist  [data]="StatusCode">
+	      </kendo-dropdownlist>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+	        <p>Start date (optional)</p>
+	        <kendo-textbox-container>
+	          <input kendoTextBox />
+	        </kendo-textbox-container>
+	      </div>
+	      <div class="col-sm-6">
+	        <p>End date (optional)</p>
+	        <kendo-textbox-container>
+	          <input kendoTextBox />
+	        </kendo-textbox-container>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+	        <p>Owner</p>
+	        <kendo-dropdownlist  [data]="Owner">
+	      </kendo-dropdownlist>
+	      </div>
+	      <div class="col-sm-6">
+	        <p>Origin (optional)</p>
+	        <kendo-dropdownlist  [data]="Origin">
+	      </kendo-dropdownlist>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-6">
+	        <p>Charge type (optional)</p>
+	        <kendo-textbox-container>
+	          <input kendoTextBox />
+	        </kendo-textbox-container>
+	      </div>
+	    </div>
+	  </div>
+	  <kendo-dialog-actions>
+	    <button kendoButton (click)="close('yes')" primary="true">Yes</button>
+	  </kendo-dialog-actions>
+	</kendo-dialog>
+</div>
+
+

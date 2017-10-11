@@ -1,0 +1,21 @@
+.create-modal {}
+
+.k-dialog {
+    min-width: 45em !important;
+    max-width:60em !important;
+}
+
+.form-preview {
+  p {
+    margin: 0;
+    font-size: 0.8em;
+  }
+  .k-textbox-container {
+    padding-top: 0;
+    padding-bottom: 0.5em;
+    width: 100%;
+  }
+  .k-dropdown {
+    width: 100%;
+  }
+}
