@@ -1,5 +1,5 @@
 <button kendoButton (click)="open()">Create Contract</button>
-<div class="create-modal">
+<div class="create-modal"  style="width: 50em">
 	<kendo-dialog title="Create Contract" *ngIf="opened" (close)="close('cancel')">
 	  <div class="form-preview">
 	    <div class="row">
@@ -94,7 +94,7 @@
 	    <div class="row">
 	      <div class="col-sm-6">
 	        <p>Owner</p>
-	        <kendo-dropdownlist  [data]="Owner">
+	        <kendo-dropdownlist  [data]="Owner" >
 	      </kendo-dropdownlist>
 	      </div>
 	      <div class="col-sm-6">
@@ -113,7 +113,7 @@
 	    </div>
 	  </div>
 	  <kendo-dialog-actions>
-	    <button kendoButton (click)="close('yes')" primary="true">Yes</button>
+	    <button kendoButton (click)="close('yes')" primary="true">Create</button>
 	  </kendo-dialog-actions>
 	</kendo-dialog>
 </div>

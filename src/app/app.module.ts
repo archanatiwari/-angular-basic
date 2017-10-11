@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import {FORM_DIRECTIVES, NgForm} from '@angular/common';
 
 import{ NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
@@ -53,21 +54,27 @@ load(
 @NgModule({
  
   imports: [
-  BrowserModule, 
-  FormsModule, 
-  HttpModule, 
-  AppRoutingModule, 
-  BrowserAnimationsModule, 
-  AngularFontAwesomeModule, 
-  DialogModule, 
-  NgbModule.forRoot(),
-  ButtonsModule,
-  InputsModule,
-  DropDownsModule
+    BrowserModule, 
+    FormsModule,
+    ReactiveFormsModule, 
+    HttpModule, 
+    AppRoutingModule, 
+    BrowserAnimationsModule, 
+    AngularFontAwesomeModule, 
+    DialogModule, 
+    NgbModule.forRoot(),
+    ButtonsModule,
+    InputsModule,
+    DropDownsModule
     // ... and register it
   ],
   
-  declarations: [AppComponent, LoginComponent, ContractComponent, CreateContractComponent],
+  declarations: [
+    AppComponent, 
+    LoginComponent, 
+    ContractComponent, 
+    CreateContractComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
