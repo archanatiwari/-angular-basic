@@ -1,7 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 import{ NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
@@ -10,10 +12,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ContractComponent } from './contract/contract.component';
 
+import { EditService } from './edit.service';
+
 import{AppRoutingModule} from './app.routes'
 
 // Import the ButtonsModule...
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { GridModule } from '@progress/kendo-angular-grid';
+
 // import {initializedRoutes} from "./app.routes";
 
 
@@ -46,13 +52,14 @@ load(
 
 @NgModule({
  
-  imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule, AngularFontAwesomeModule, NgbModule.forRoot(),
+  imports: [BrowserModule, BrowserAnimationsModule, FormsModule, HttpModule, JsonpModule, AppRoutingModule, AngularFontAwesomeModule,GridModule, NgbModule.forRoot(),
     // ... and register it
     ButtonsModule
   ],
   
   declarations: [AppComponent, LoginComponent, ContractComponent],
-  providers: [],
+  providers: [EditService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

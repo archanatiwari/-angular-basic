@@ -1,3 +1,28 @@
-<p>
-  contract works!
-</p>
+<div class="container">
+<!-- <kendo-grid [kendoGridBinding]="gridData" [pageSize]="5" [pageable]="true" [sortable]="true" [filterable]="true" [groupable]="true" 
+    [height]="510" (edit)="editHandler($event)" (remove)="removeHandler($event)">
+    
+    <kendo-grid-column field="Contract" [width]="140"></kendo-grid-column>
+    <kendo-grid-column field="Description" [width]="120"></kendo-grid-column>
+   
+   
+</kendo-grid> -->
+
+<kendo-grid
+[data]="gridData" [height]="533" [pageSize]="pageSize" [pageable]="true" [skip]="skip" [filterable]="true" 
+(remove)="removeHandler($event)" (pageChange)="pageChange($event)">
+<ng-template kendoGridToolbarTemplate>
+  <button kendoGridAddCommand>Add new</button>
+</ng-template>
+<kendo-grid-column field="Contract" title="Product Name"></kendo-grid-column>
+<kendo-grid-column field="Description" editor="numeric" title="Price"></kendo-grid-column>
+<kendo-grid-command-column title="command" width="220">
+  <ng-template kendoGridCellTemplate let-isNew="isNew">
+      <button kendoGridRemoveCommand>Remove</button>
+  </ng-template>
+</kendo-grid-command-column>
+
+
+</kendo-grid>
+
+</div>
