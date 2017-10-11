@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
+
 
 import{ NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
+import { DialogModule } from '@progress/kendo-angular-dialog';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ContractComponent } from './contract/contract.component';
+import { CreateContractComponent } from './create-contract/create-contract.component';
 
 import { EditService } from './edit.service';
 
@@ -52,13 +59,35 @@ load(
 
 @NgModule({
  
-  imports: [BrowserModule, BrowserAnimationsModule, FormsModule, HttpModule, JsonpModule, AppRoutingModule, AngularFontAwesomeModule,GridModule, NgbModule.forRoot(),
+
+  imports: [
+    BrowserModule, 
+    FormsModule,
+    GridModule,
+    ReactiveFormsModule, 
+    HttpModule,
+    JsonpModule, 
+    AppRoutingModule, 
+    BrowserAnimationsModule, 
+    AngularFontAwesomeModule, 
+    DialogModule, 
+    NgbModule.forRoot(),
+    ButtonsModule,
+    InputsModule,
+    DropDownsModule
+
     // ... and register it
-    ButtonsModule
   ],
   
-  declarations: [AppComponent, LoginComponent, ContractComponent],
+
+  declarations: [
+    AppComponent, 
+    LoginComponent, 
+    ContractComponent, 
+    CreateContractComponent
+  ],
   providers: [EditService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
