@@ -22,7 +22,7 @@ export class ContractComponent implements OnInit {
   private gridData: GridDataResult;
   private items: any[] = products;
   
-  private pageSize: number = 10;
+  private pageSize: number = 5;
   private skip: number = 0;
   
   constructor() {

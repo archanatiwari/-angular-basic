@@ -3,16 +3,17 @@ import {Routes,RouterModule} from "@angular/router";
 
 import {LoginComponent} from "./login/login.component";
 import {ContractComponent} from "./contract/contract.component";
-import {CreateContractComponent} from "./create-contract/create-contract.component";
+// import {CreateContractComponent} from "./create-contract/create-contract.component";
 
 const routes:Routes = [
     {
         path: 'contract',
         component:ContractComponent
-    },{
-        path: 'createContract',
-        component:CreateContractComponent
     },
+    // {
+    //     path: 'createContract',
+    //     component:CreateContractComponent
+    // },
     {
         path: 'login',
         component:LoginComponent

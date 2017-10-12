@@ -17,7 +17,7 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ContractComponent } from './contract/contract.component';
-import { CreateContractComponent } from './create-contract/create-contract.component';
+import { CreateContractComponent } from './contract/create-contract/create-contract.component';
 
 import { EditService } from './edit.service';
 
