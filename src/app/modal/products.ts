@@ -1,4 +1,4 @@
-﻿export const products = [{
+export const products = [{
     "Id": "ALFKI",
     "Contract": "Alfreds Futterkiste",
     "Description": "Maria Anders"

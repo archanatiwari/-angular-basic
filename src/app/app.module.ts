@@ -19,7 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { ContractComponent } from './contract/contract.component';
 import { CreateContractComponent } from './contract/create-contract/create-contract.component';
 
-import { EditService } from './edit.service';
+import { EditService } from './services/edit.service';
 
 import{AppRoutingModule} from './app.routes'
 

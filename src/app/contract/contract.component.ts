@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { products } from '../products';
+import { products } from '../modal/products';
 import { Observable } from 'rxjs/Rx';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { State, process } from '@progress/kendo-data-query';

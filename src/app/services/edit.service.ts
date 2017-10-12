@@ -1,12 +1,5 @@
 import { Injectable } from '@angular/core';
-import { products } from './products'
-// import { Observable } from 'rxjs/Rx';
-// import { Jsonp } from '@angular/http';
-// import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-
-// const CREATE_ACTION = 'create';
-// const UPDATE_ACTION = 'update';
-// const REMOVE_ACTION = 'destroy';
+import { products } from '../modal/products'
 
 @Injectable()
 export class EditService {
@@ -16,6 +9,8 @@ export class EditService {
     public products(): any[]{
         return this.data;
     }
+    
+    constructor() { }
 
     public remove(item: any,index = 0): void {
          index = this.data.findIndex(({ ProductID }) => ProductID ===item.ProductID);
@@ -26,4 +21,3 @@ export class EditService {
 
  
 }
-
