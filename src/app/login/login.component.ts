@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -29,7 +30,12 @@ export class LoginComponent implements OnInit {
 	      ])
 	    });
 	}
-
+	// doLogin(event){
+	// 	if(event.keyCode == 13) {
+	// 	    alert('you just clicked enter');
+	// 	    this.router.navigate(['./contract'])
+	// 	}
+	// }
     get username() { 
     	return this.loginForm.get('username'); 
     }
