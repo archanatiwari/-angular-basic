@@ -11,7 +11,7 @@
 [data]="gridData" [height]="533" [pageSize]="pageSize" [pageable]="true" [skip]="skip" [filterable]="true" 
 (remove)="removeHandler($event)" (pageChange)="pageChange($event)">
 <ng-template kendoGridToolbarTemplate>
-  <button kendoGridAddCommand routerLink="/createContract">Add Contract</button>
+  <app-create-contract></app-create-contract>
 </ng-template>
 <kendo-grid-column field="Contract" title="Product Name"></kendo-grid-column>
 <kendo-grid-column field="Description" editor="numeric" title="Price"></kendo-grid-column>
@@ -24,5 +24,8 @@
 </kendo-grid>
 
 </div>
+
+
+
 
 
