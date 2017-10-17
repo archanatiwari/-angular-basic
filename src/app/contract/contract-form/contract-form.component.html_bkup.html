@@ -1,0 +1,124 @@
+<div class="create-modal" style="width: 50em">
+  <kendo-dialog title="Create Contract" (close)="close('cancel')">
+  	<form [formGroup]="contractForm" (ngSubmit)="onContractsFormSubmit()" >
+	    <div class="form-preview">
+	      <div class="row">
+	        <div class="col-sm-6">
+	       	<div class="form-group">
+	            <label class="sr-only" for="ContractCode">Contract code</label>
+	            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+	              <input id="ContractCode" class="form-control" formControlName="ContractCode" placeholder="ContractCode" required autofocus="true">
+	            </div>
+	        </div>
+	        </div>
+	        <div class="col-sm-6">
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-12">
+	        	<div class="form-group">
+		            <label class="sr-only" for="ContractDescription">Contract description</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <input id="ContractDescription" class="form-control" formControlName="ContractDescription" placeholder="ContractDescription" required autofocus="true">
+		            </div>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-12">
+	          <p>SOR title (optional)</p>
+	          <kendo-textbox-container>
+	            <input kendoTextBox formControlName="SORTitle" />
+	          </kendo-textbox-container>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-6">
+	          <p>Default question set (optional)</p>
+	          <kendo-dropdownlist [data]="QuestionSet">
+	          </kendo-dropdownlist>
+	        </div>
+	        <div class="col-sm-6">
+	          <p>List name (optional)</p>
+	          <kendo-dropdownlist [data]="ListName">
+	          </kendo-dropdownlist>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-6">
+	          <p>Invoice type</p>
+	          <kendo-textbox-container>
+	            <input kendoTextBox formControlName="InvoiceType" />
+	          </kendo-textbox-container>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-6">
+	          <p>Rentention percentage (optional)</p>
+	          <kendo-textbox-container>
+	            <input kendoTextBox formControlName="RententionPercentage" />
+	          </kendo-textbox-container>
+	        </div>
+	        <div class="col-sm-6">
+	          <p>Retention period (optional)</p>
+	          <kendo-textbox-container>
+	            <input kendoTextBox formControlName="RetentionPeriod" />
+	          </kendo-textbox-container>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-3">
+	          <p>Planned maintenance</p>
+	          <kendo-switch [(ngModel)]="isChecked"></kendo-switch>
+	        </div>
+	        <div class="col-sm-3">
+	          <p>Job complete</p>
+	          <kendo-switch [(ngModel)]="checked"></kendo-switch>
+	        </div>
+	        <div class="col-sm-6">
+	          <p>Status code</p>
+	          <kendo-dropdownlist [data]="StatusCode">
+	          </kendo-dropdownlist>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-6">
+	          <p>Start date (optional)</p>
+	          <kendo-textbox-container>
+	            <input kendoTextBox formControlName="StartDate" />
+	          </kendo-textbox-container>
+	        </div>
+	        <div class="col-sm-6">
+	          <p>End date (optional)</p>
+	          <kendo-textbox-container>
+	            <input kendoTextBox formControlName="EndDate" />
+	          </kendo-textbox-container>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-6">
+	          <p>Owner</p>
+	          <kendo-dropdownlist [data]="Owner">
+	          </kendo-dropdownlist>
+	        </div>
+	        <div class="col-sm-6">
+	          <p>Origin (optional)</p>
+	          <kendo-dropdownlist [data]="Origin">
+	          </kendo-dropdownlist>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-6">
+	          <p>Charge type (optional)</p>
+	          <kendo-textbox-container>
+	            <input kendoTextBox formControlName="ChargeType" />
+	          </kendo-textbox-container>
+	        </div>
+	      </div>
+	    </div>
+	    <kendo-dialog-actions>
+	      <button kendoButton primary="true">Create</button>
+	    </kendo-dialog-actions>
+    </form>
+  </kendo-dialog>
+</div>

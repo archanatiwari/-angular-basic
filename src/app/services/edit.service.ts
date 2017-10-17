@@ -15,9 +15,9 @@ export class EditService {
     public remove(item: any,index = 0): void {
          index = this.data.findIndex(({ ProductID }) => ProductID ===item.ProductID);
         this.data.splice(index, 1);
-      
         
     }
 
+	
  
 }

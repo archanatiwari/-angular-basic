@@ -1,0 +1,162 @@
+<div class="create-modal" style="width: 50em">
+  <kendo-dialog title="Create Contract" (close)="close('cancel')">
+  	<form [formGroup]="contractForm" (ngSubmit)="onContractsFormSubmit()" >
+	    <div class="form-preview">
+	      <div class="row">
+	        <div class="col-sm-6">
+	       	<div class="form-group">
+	            <label class="sr-only" for="ContractCode">Contract code</label>
+	            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+	              <input id="ContractCode" class="form-control" formControlName="ContractCode" placeholder="ContractCode" required autofocus="true">
+	            </div>
+	        </div>
+	        </div>
+	        <div class="col-sm-6">
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-12">
+	        	<div class="form-group">
+		            <label class="sr-only" for="ContractDescription">Contract description</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <input id="ContractDescription" class="form-control" formControlName="ContractDescription" placeholder="ContractDescription" required>
+		            </div>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-12">
+	        	<div class="form-group">
+		            <label class="sr-only" for="SORTitle">SOR title (optional)</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <input id="SORTitle" class="form-control" formControlName="SORTitle" placeholder="SORTitle" required>
+		            </div>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-6">
+	        	<div class="form-group">
+		            <label class="sr-only">Default question set (optional)</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              	<kendo-dropdownlist [data]="QuestionSet" formControlName="DefaultQuestionSet"></kendo-dropdownlist>
+		            </div>
+	        	</div>
+	        </div>
+	        <div class="col-sm-6">
+	        	<div class="form-group">
+		            <label class="sr-only">Default question set (optional)List name (optional)</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              	<kendo-dropdownlist [data]="ListName" formControlName="ListName"></kendo-dropdownlist>
+		            </div>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-6">
+	        	<div class="form-group">
+		            <label class="sr-only" for="InvoiceType">Invoice type</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <input id="InvoiceType" class="form-control" formControlName="InvoiceType" placeholder="InvoiceType" required>
+		            </div>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-6">
+	           <div class="form-group">
+		            <label class="sr-only" for="RententionPercentage">Rentention percentage (optional)</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <input id="RententionPercentage" class="form-control" formControlName="RententionPercentage" placeholder="RententionPercentage" required>
+		            </div>
+	        	</div>
+	        </div>
+	        <div class="col-sm-6">
+	        	<div class="form-group">
+		            <label class="sr-only" for="RetentionPeriod">Retention period (optional)</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <input id="RetentionPeriod" class="form-control" formControlName="RetentionPeriod" placeholder="RetentionPeriod" required>
+		            </div>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-3">
+	        	<div class="form-group">
+		            <label class="sr-only">Planned maintenance</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <kendo-switch></kendo-switch>
+		            </div>
+	        	</div>
+	        </div>
+	        <div class="col-sm-3">
+	        	<div class="form-group">
+		            <label class="sr-only">Job complete</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <kendo-switch></kendo-switch>
+		            </div>
+	        	</div>
+	        </div>
+	        <div class="col-sm-6">
+	        	<div class="form-group">
+		            <label class="sr-only">Status code</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <kendo-dropdownlist [data]="StatusCode" formControlName="StatusCode"></kendo-dropdownlist>
+		            </div>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-6">
+	        	<div class="form-group">
+		            <label class="sr-only" for="StartDate">Start date (optional)</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <kendo-datepicker [(value)]="value" formControlName="StartDate"></kendo-datepicker>
+		            </div>
+	        	</div>
+	        </div>
+	        <div class="col-sm-6">
+	        	<div class="form-group">
+		            <label class="sr-only" for="EndDate">End date (optional)</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <kendo-datepicker [(value)]="value1" formControlName="EndDate"></kendo-datepicker>
+		            </div>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-6">
+	        	<div class="form-group">
+		            <label class="sr-only">Owner</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <kendo-dropdownlist [data]="Owner" formControlName="Owner"></kendo-dropdownlist>
+		            </div>
+	        	</div>
+	        </div>
+	        <div class="col-sm-6">
+	        	<div class="form-group">
+		            <label class="sr-only">Origin (optional)</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <kendo-dropdownlist [data]="Origin" formControlName="Origin"></kendo-dropdownlist>
+		            </div>
+	        	</div>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="col-sm-6">
+	        	<div class="form-group">
+		            <label class="sr-only" for="ChargeType">Charge type (optional)</label>
+		            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+		              <input id="ChargeType" class="form-control" formControlName="ChargeType" placeholder="ChargeType" required>
+		            </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+	    <kendo-dialog-actions>
+	      <button kendoButton *ngIf="!contractIdToUpdate" primary="true" [disabled]="!contractForm.valid" >Create</button>
+	      <button kendoButton *ngIf="contractIdToUpdate" primary="true">Update</button>
+	    </kendo-dialog-actions>
+    </form>
+  </kendo-dialog>
+</div>

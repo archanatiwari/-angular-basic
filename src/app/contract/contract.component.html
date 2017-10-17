@@ -11,18 +11,19 @@
 [data]="gridData" [height]="533" [pageSize]="pageSize" [pageable]="true" [skip]="skip" [filterable]="true" 
 (remove)="removeHandler($event)" (pageChange)="pageChange($event)">
 <ng-template kendoGridToolbarTemplate>
-  <app-create-contract></app-create-contract>
+	<button kendoButton (click)="open()">Create Contract</button>
 </ng-template>
-<kendo-grid-column field="Contract" title="Product Name"></kendo-grid-column>
-<kendo-grid-column field="Description" editor="numeric" title="Price"></kendo-grid-column>
+<kendo-grid-column field="Contract" title="Contract"></kendo-grid-column>
+<kendo-grid-column field="Description" editor="numeric" title="Description"></kendo-grid-column>
 <kendo-grid-command-column title="command" width="220">
   <ng-template kendoGridCellTemplate let-isNew="isNew">
-      <button kendoGridRemoveCommand>Remove</button>
+    <button kendoButton (click)="open()">Edit</button>
+    <button kendoButton (click)="open()">View</button>
+    <button kendoGridRemoveCommand>Remove</button>
   </ng-template>
 </kendo-grid-command-column>
-
 </kendo-grid>
-
+<contract-form (isOpen)='open()' (isClose)='close($event)' *ngIf="opened"></contract-form>
 </div>
 
 

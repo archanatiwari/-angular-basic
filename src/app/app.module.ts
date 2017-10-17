@@ -12,16 +12,18 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awes
 import { DialogModule } from '@progress/kendo-angular-dialog';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ContractComponent } from './contract/contract.component';
-import { CreateContractComponent } from './contract/create-contract/create-contract.component';
+import { ContractFormComponent } from './contract/contract-form/contract-form.component';
 
 import { EditService } from './services/edit.service';
+import { ContractService } from './services/contract.service';
 
-import{AppRoutingModule} from './app.routes'
+import { AppRoutingModule } from './app.routes'
 
 // Import the ButtonsModule...
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
@@ -74,7 +76,8 @@ load(
     NgbModule.forRoot(),
     ButtonsModule,
     InputsModule,
-    DropDownsModule
+    DropDownsModule,
+    DateInputsModule
 
     // ... and register it
   ],
@@ -84,9 +87,9 @@ load(
     AppComponent, 
     LoginComponent, 
     ContractComponent, 
-    CreateContractComponent
+    ContractFormComponent
   ],
-  providers: [EditService],
+  providers: [EditService, ContractService],
 
   bootstrap: [AppComponent]
 })

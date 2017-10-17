@@ -4,10 +4,12 @@
 }
 
 .form-preview {
-  p {
-    margin: 0;
+  label {
     font-size: 0.8em;
-  }
+    position: relative;
+    width: auto;
+    height: auto;
+}
   .k-textbox-container {
     padding-top: 0;
     padding-bottom: 0.5em;
